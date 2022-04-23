@@ -35,7 +35,8 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'story_mode',
 		'freeplay',
-		'credits',
+		'credits', 
+                'extra', 
 		'options'
 	];
 
@@ -151,7 +152,7 @@ class MainMenuState extends MusicBeatState
 		#end
 
                 #if android
-                addVirtualPad(UP_DOWN, A_B_E);
+                addVirtualPad(UP_DOWN_LEFT_RIGHT, A_B);
                 #end
 
 		super.create();
@@ -201,9 +202,9 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
-				if (optionShit[curSelected] == 'donate')
+				if (optionShit[curSelected] == 'extra')
 				{
-					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
+					CoolUtil.browserLoad('https://youtu.be/dQw4w9WgXcQ');
 				}
 				else
 				{
